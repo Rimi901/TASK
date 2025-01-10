@@ -1,0 +1,122 @@
+/* General styles for the body of the page */
+body {
+    margin: 0; /* Removes default browser margins */
+    font-family: Arial, sans-serif; /* Sets the font to Arial with a fallback to sans-serif */
+    background-color: #bbcce9; /* Light blue background for the page */
+    display: flex; /* Uses Flexbox to center the content */
+    justify-content: center; /* Horizontally centers the content */
+    align-items: center; /* Vertically centers the content */
+    height: 100vh; /* Sets the height of the page to the full viewport height */
+}
+
+/* Styles for the main container of the login form */
+.login-container {
+    height: 250px;
+    width: 150%; /* Makes the container take up 90% of the viewport width */
+    max-width: 400px; /* Limits the maximum width to 400px */
+    background-color: #d7f5fc; /* Light background color for the container */
+    border-radius: 10px; /* Rounds the corners of the container */
+    padding: 20px; /* Adds space inside the container */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Creates a soft shadow for depth */
+    position: relative; /* Needed for positioning the pseudo-elements */
+    overflow: hidden; /* Ensures no content overflows outside the container */
+}
+
+/* Pseudo-elements for decorative circular shapes */
+.login-container::before,
+.login-container::after {
+    content: ''; /* Creates an empty element */
+    position: absolute; /* Positions the shapes relative to the container */
+    width: 100px; /* Sets the width of the circles */
+    height: 100px; /* Sets the height of the circles */
+    background-color: #811f1f; /* Light red color for the circles */
+    border-radius: 50%; /* Makes the shapes circular */
+    opacity: 0.6; /* Reduces opacity for a softer look */
+}
+
+/* Positioning the top-left circle */
+.login-container::before {
+    top: -50px; /* Moves the circle upwards */
+    left: -50px; /* Moves the circle leftwards */
+}
+
+/* Positioning the bottom-right circle */
+.login-container::after {
+    top: -50px; /* Resets top positioning */
+    right: -50px; /* Moves the circle rightwards */
+}
+
+/* Styles for the heading in the login form */
+.login-form h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serifs;
+    text-align: center; /* Centers the heading text */
+    color: #5e1010; /* Dark gray text color */
+    text-shadow: 1px 1px 2px rgba(88, 20, 20, 0.2); /* Adds a subtle shadow to the text */
+    margin-bottom: 20px; /* Adds space below the heading */
+}
+
+/* Styles for the form itself */
+.login-form form {
+    display: flex; /* Uses Flexbox for layout */
+    flex-direction: column; /* Stacks items vertically */
+    gap: 15px; /* Adds space between the items */
+}
+
+/* Styles for the input fields */
+.login-form input {
+    padding: 10px; /* Adds padding inside the input fields */
+    border: 1px solid #e1b8b8; /* Light gray border around the fields */
+    border-radius: 5px; /* Rounds the corners of the input fields */
+    font-size: 16px; /* Sets the font size for the text */
+    font-family: black;
+    background-color: #fcbcbc; /* Light pink background color */
+    outline: none; /* Removes the default outline on focus */
+
+}
+.login-form input::placeholder {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    font-weight: bold;
+    color: black; /* Ensures placeholder text is black */
+    opacity: 1; /* Makes placeholder text fully opaque */
+}
+
+
+/* Styles for the submit button */
+.login-form button {
+    position: absolute;
+    top: 220px;
+    left: 100px;
+    right: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px; /* Adds padding inside the button */
+    border: none; /* Removes the default border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    background-color: #fec2c2; /* Dark brown background color */
+    color: 000000; /* White text color */
+    font-weight: bold;
+    font-size: 20px; /* Sets the font size of the button text */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+}
+
+/* Hover effect for the button */
+.login-form button:hover {
+    background-color: #3b1212; /* Changes the button background to a darker brown */
+}
+
+/* Media query for smaller screen sizes (up to 500px width) */
+@media (max-width: 500px) {
+    .login-container {
+        padding: 15px; /* Reduces padding for smaller screens */
+    }
+
+    .login-form h1 {
+        font-size: 24px; /* Reduces the font size of the heading */
+    }
+
+    .login-form input,
+    .login-form button {
+        font-size: 14px; /* Reduces the font size for inputs and button text */
+    }
+}
